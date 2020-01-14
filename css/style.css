@@ -1,0 +1,578 @@
+@charset "UTF-8";
+
+html {
+ font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGotcic, "游ゴシック体", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul, li, dl, dt, dd {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 1em;  
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+section {
+  margin-bottom: 120px; 
+}
+
+.content-wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* ここまで基本の記述 */
+/* ------------------------------------------- */
+
+.header-nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav ul li {
+  margin-right: 50px;
+} 
+
+.header-nav .header-nav-title {
+  margin-left: 50px;
+}
+
+/* ここまでヘッダー */
+/* ---------------------------------------------------------- */
+.main-visual {
+  position: relative;
+  height: 600px;
+}
+
+.main-visual .image {
+  width: 70%;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 30%;
+}
+
+.main-visual .main-title {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  background-color: rgba(250, 250, 250, 0.6);
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.main-visual::before {
+  content: '';
+  background: #e8e7e7;
+  height: 700px;
+  width: 45%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: -1;
+}
+
+/* ここまでセクション1 */
+/* --------------------------------------------------------------- */
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.greeting .greeting-contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.greeting-contents .greeting-image {
+  width: 50%;
+}
+
+.greeting-contents .greeting-description {
+  width: 48%;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* ここまでセクション2 */
+/* -------------------------------------------------------------- */
+
+.work {
+  width: 100%;
+  padding-top: 70px;
+  position: relative;
+}
+
+.work::before {
+  content:'';
+  background: #e8e7e7;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
+/* paddingで上に余白をとった上で、タイトルにmarginを付けることで、グレーの背景がうまく収まるように調整。 */
+
+.work ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work ul li {
+  width: 30%;
+}
+
+.work .heading {
+  margin: 70px 0;
+} 
+
+/*  ここまでセクション3*/
+/* ------------------------------------------------------------- */
+
+.news .content-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 180px;
+}
+
+.news li {
+  border-bottom: 1px dotted #dedede;
+  padding: 20px 0;
+}
+
+.news li a {
+  color: #333;
+}
+
+.news li time {
+  display: inline-block;
+  font-size: 1rem;
+  color: #949494;
+  margin-right: 80px;
+}
+/* ここまでセクション4 */
+
+.recruit {
+  position: relative;
+}
+
+.recruit-img {
+  position: relative;
+}
+
+.recruit-img img {
+  width: 70%;
+  height: 300px;
+  margin-right: 20%;
+  /* object-fit: cover; */
+}
+
+.recruit-img::before {
+  content:'';
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 45%;
+  height: 300px;
+  background-color: #e8e7e7;
+  z-index: -1;
+
+}
+
+.recruit-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.recruit .heading a {
+  position: absolute;
+  top: 40%;
+  right: 52.5%;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+/* ここまでセクション5 */
+/* ----------------------------------------------------------- */
+
+.footer {
+  width: 100%;
+}
+
+.footer .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .heading {
+  text-align: left;
+  margin: 0;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer ul li {
+  margin-right: 50px;
+}
+
+.copyright {
+  height: 90px;
+  margin-top: 50px;  
+  background-color: #e8e7e7;
+  text-align: center;
+  line-height: 90px;
+}
+
+.copyright-text {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* ----------------------------------------------------------- */
+/* company.htmlのデザイン */
+
+.subvisual {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.subvisual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/thinking.png) no-repeat center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 200px;
+  opacity: 0.4;
+}
+
+.subvisual-title {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 200px;
+}
+/* ここまでヘッダー */
+/* ----------------------------------------------------------- */
+
+.company-greeting {
+  margin-bottom: 120px;
+}
+
+.company-greeting .greeting-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; 
+}
+
+.company-greeting .greeting-contents .greeting-image {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.company-greeting .greeting-contents .greeting-description {
+  width: 80%;
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+.company-greeting .heading {
+  margin: 0 0 50px;
+  text-align: center;
+}
+/* ここまでグリーティング */
+/* ------------------------------------------------------------- */
+
+.company-profile {
+  margin-bottom: 120px;
+} 
+
+table.company {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #e8e7e7; 
+}
+
+table.company th {
+  padding: 20px;
+  width: 30%;
+  line-height: 1.5em;
+  background-color: #dadada;
+  border-bottom: 1px solid #e8e7e7;
+}
+
+table.company td {
+  padding: 20px;
+  text-align: left;
+  line-height: 1.5em;
+  border-bottom: 1px solid #e8e7e7;
+}
+
+/* ここまで下層ページ */
+/* ----------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .header-nav, .footer-nav {
+    display: none;
+  }
+
+  .main-visual {
+    width: 80%;
+    height: auto;
+    margin: 0 0 0 auto;
+  }
+
+  .main-visual::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .main-visual .image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .main-visual .main-title {
+    font-size: 1.5rem;
+    top: 40%;
+    left: 0;
+    width: 70%;
+    margin-left: -16%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .main-visual::before {
+    width: 80%;
+    margin-left: -50%; 
+    height: 250%;
+  }
+  /* ここまでセクション１の修正 */
+  /* -------------------------------------------------------------- */
+
+  .heading {
+    font-size: 1.8rem;
+    margin: 20px 0;
+  }
+
+  .greeting .greeting-contents {
+    display: block;
+    margin: 60px 0 0;
+  }
+
+  .greeting-contents .greeting-image {
+    width: 80%;
+  }
+
+  .greeting-contents .greeting-description {
+    width: 100%;
+    min-height: 300px;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+  }
+
+  .greeting-contents .greeting-description .heading {
+    text-align: left;
+  }
+  /* ここまでセクション２の修正 */
+  /* ------------------------------------------------------------- */
+
+  .work {
+    padding: 0 0 20px;
+    background: #e8e7e7;
+    margin-bottom: 60px;
+  }
+
+  .work .heading {
+    margin: 0;
+    padding: 40px;
+  }
+
+  .work ul {
+    display: block;
+  }
+
+
+  .work ul li {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+  /* ここまでセクション３の修正 */
+  /* -------------------------------------------------------------- */
+
+  .news .content-wrapper {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+
+  .news li a {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .news li time {
+    display: block;
+  }
+  /* ここまでセクション４の修正 */
+  /* --------------------------------------------------------------- */
+
+  .recruit {
+    width: 100%;
+    height: 150px;
+    background: #e8e7e7;
+    margin-bottom: 60px;
+  }
+
+  .recruit-img img {
+    display: none;
+  }
+
+  .recruit-img::before {
+    display: none;
+  }
+
+  .recruit-img::after {
+    display: none;
+  }
+
+  .recruit .heading a {
+    top: 40%;
+    left: 20%;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3) 
+  }
+/* ----------------------------------------------- */
+
+/* ここからcompany.html */
+/* ----------------------------------------------- */
+
+  .subvisual {
+    margin-bottom: 60px;
+  }
+
+  .subvisual::before {
+    height: 80px;
+  }
+
+  .subvisual-title {
+    line-height: 80px;
+  }
+
+  .company-profile {
+    margin-bottom: 60px;
+  } 
+
+  .company-greeting .greeting-contents {
+    display: block;
+  }
+
+  .company-greeting .greeting-contents .greeting-image {
+    width: 100%;
+  }
+
+  .company-greeting .greeting-contents .greeting-description {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+
+  .company-greeting .heading {
+    margin: 0 0 20px;
+  }
+
+  table.company {
+    width: 100%;
+    margin: 0 auto 0 0 ; 
+  }
+
+  table.company th {
+    padding: 10px 5px;
+    width: 35%;
+    background-color: #dadada;
+    border-bottom: 1px solid #e8e7e7;
+  }
+  
+  table.company td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #e8e7e7;
+  }
+
+  .company-map {
+    margin-bottom: 60px;
+  }
+
+  .company-map iframe {
+    height: auto;
+  }
+
+}
+
+
+
+
